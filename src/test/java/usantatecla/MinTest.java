@@ -17,7 +17,7 @@ public class MinTest extends SubIntervalTest {
     this.subInterval = this.createMin();
   }
 
-  protected Min createMin() {
+  protected SubInterval createMin() {
     return new Min(this.point.getEquals());
   }
 

@@ -17,7 +17,7 @@ public class MaxTest extends SubIntervalTest {
     this.subInterval = this.createMax();
   }
 
-  protected Max createMax() {
+  protected SubInterval createMax() {
     return new Max(this.point.getEquals());
   }
 
