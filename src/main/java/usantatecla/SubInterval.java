@@ -8,4 +8,6 @@ public abstract class SubInterval {
         this.value = value;
     }    
 
+    public abstract boolean isWithin(double value);
+
 }

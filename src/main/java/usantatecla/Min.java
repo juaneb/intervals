@@ -1,11 +1,9 @@
 package usantatecla;
 
-public class Min {
+public class Min extends SubInterval{
 
-  protected double value;
-
-	public Min(double value) {
-    this.value = value;
+  public Min(double value) {
+    super(value);
   }
 
 	public boolean isWithin(double value) {
