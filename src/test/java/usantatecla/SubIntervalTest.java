@@ -10,5 +10,9 @@ public abstract class SubIntervalTest {
     public abstract void givenSubIntervalWhenIsWithinWithLessValue();
 
     @Test
+    public abstract void givenMinWhenIsWithinWithEqualsValue();
+    
+
+    @Test
     public abstract void givenSubIntervalWhenIsWithinWithGreaterValue();
 }
