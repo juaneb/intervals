@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class MaxTest {
+public class MaxTest extends SubIntervalTest {
   
   protected Max max;
   protected Point point;
@@ -14,7 +14,7 @@ public class MaxTest {
   @BeforeEach
   public void before(){
     this.point = new Point(4.4);
-    this.max = this.createMax();
+    this.subInterval = this.createMax();
   }
 
   protected Max createMax() {
@@ -22,18 +22,21 @@ public class MaxTest {
   }
 
   @Test
-  public void givenMaxWhenIsWithinWithLessValueThenTrue(){
-    assertTrue(this.max.isWithin(this.point.getLess()));
+  @Override  
+  public void givenSubIntervalWhenIsWithinWithLessValue(){
+    assertTrue(this.subInterval.isWithin(this.point.getLess()));
   }
 
   @Test
-  public void givenMaxWhenIsWithinWithEqualsValue(){
-    assertFalse(this.max.isWithin(this.point.getEquals()));
+  @Override  
+  public void givenMinWhenIsWithinWithEqualsValue(){
+    assertFalse(this.subInterval.isWithin(this.point.getEquals()));
   }
 
   @Test
-  public void givenMaxWhenIsWithinWithGreaterValueThenTrue(){
-    assertFalse(this.max.isWithin(this.point.getGreater()));
+  @Override  
+  public void givenSubIntervalWhenIsWithinWithGreaterValue(){
+    assertFalse(this.subInterval.isWithin(this.point.getGreater()));
   }
  
 }
